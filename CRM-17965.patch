@@ -1,0 +1,14 @@
+diff --git a/CRM/Utils/System/Drupal.php b/CRM/Utils/System/Drupal.php
+old mode 100644
+new mode 100755
+index 0d6bf7e..d18410a
+--- a/CRM/Utils/System/Drupal.php
++++ b/CRM/Utils/System/Drupal.php
+@@ -803,6 +803,7 @@ AND    u.status = 1
+    * @inheritDoc
+    */
+   public function setHttpHeader($name, $value) {
++    self::loadBootStrap(NULL, FALSE);
+     drupal_add_http_header($name, $value);
+   }
+ 
